@@ -5,13 +5,19 @@ export default function Car({cardata}) {
     <div className="card">
         <img src={'/src/assets/'+cardata['picture']} className="card-img-top" alt={cardata['Name']}/>
         <div className="card-body">
-            <h5 className="card-title">{cardata['Name']}</h5>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">An item</li>
-                <li className="list-group-item">A second item</li>
-                <li className="list-group-item">A third item</li>
+            <h2 className="card-title ps-3">{cardata['Name']}</h2>
+            <ul className="list-group list-group-flush">              
+                <li className="list-group-item"><strong>Miles per Gallon:</strong> {cardata['Miles_per_Gallon']}</li>                
+                <li className="list-group-item"><strong>Cylinders:</strong> {cardata['Cylinders']}</li>
+                <li className="list-group-item"><strong>Horsepower:</strong> {cardata['Horsepower']}</li>
+                <li className="list-group-item"><strong>Weight in lbs:</strong> {cardata['Weight_in_lbs']}</li>
+                <li className="list-group-item"><strong>Acceleration:</strong> {cardata['Acceleration']}</li>
+                <li className="list-group-item"><strong>Year:</strong> {cardata['Year']}</li>
+                <li className="list-group-item"><strong>Origin:</strong> {cardata['Origin']}</li>
             </ul>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <div className="card-footer">
+              <button aria-selected type="button" className="btn btn-primary">Go somewhere</button>
+            </div>
         </div>
     </div>
   )

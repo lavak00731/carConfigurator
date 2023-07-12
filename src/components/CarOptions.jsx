@@ -9,7 +9,7 @@ export default function CarOptions({data}) {
   }
 
   return (
-    <ul className="">
+    <ul className="d-flex flex-row list-unstyled column-gap-3">
       {
         data.map(({id, cardata}) => (
           <li key={id}>

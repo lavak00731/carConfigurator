@@ -1,19 +1,16 @@
-import { useEffect, useState } from "react"
-import { useData } from './service/useData';
-import CarOptions from "./components/CarOptions";
-export const CarConfig = () => {
-  const [options, setOptions] = useState([]);
- 
-  const { data } = useData('https://carconfigurator.free.beeceptor.com/carconfig')           
+import {Route, Routes} from 'react';
+import { CarSelection } from './pages/CarSelection';
+import CarPersonalization from './pages/CarPersonalization';
 
+
+export const CarConfig = () => { 
+  console.log('entro')
   return (
-    <div className="container">
-        <header>
-            <h1 className="text-center">Welcome to Car Configurator</h1>
-        </header>
-        <main>     
-          <CarOptions data={ data } />
-        </main>
-    </div>
+
+      <Routes>
+        <Route path="/" element={<CarSelection />}/>
+        <Route path="/:carId" element={<CarPersonalization/> }/>
+      </Routes>
+
   )
 }
