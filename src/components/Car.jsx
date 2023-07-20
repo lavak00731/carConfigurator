@@ -1,6 +1,6 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-export default function Car({cardata}) {
+export default function Car({cardata, id}) {
   return (
     <div className="card">
         <img src={'/src/assets/'+cardata['picture']} className="card-img-top" alt={cardata['Name']}/>
@@ -16,7 +16,7 @@ export default function Car({cardata}) {
                 <li className="list-group-item"><strong>Origin:</strong> {cardata['Origin']}</li>
             </ul>
             <div className="card-footer">
-              <button aria-selected type="button" className="btn btn-primary">Go somewhere</button>
+              <Link to={`/${id}`} className="btn btn-primary">Select car <span className="visually-hidden">{cardata['Name']}</span></Link>
             </div>
         </div>
     </div>

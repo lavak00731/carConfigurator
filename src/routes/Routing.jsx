@@ -1,9 +1,7 @@
-import React from 'react'
-
-function routing() {
+function Routing() {
   return (
     <div>routing</div>
   )
 }
 
-export default routing
+export default Routing

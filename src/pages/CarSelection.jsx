@@ -1,17 +1,17 @@
 import { useData } from './../service/useData';
 import CarOptions from "./../components/CarOptions";
 
-export const CarSelection2 = () => {
+export default function CarSelection() {
 
-  const { data } = useData('https://carconfigurator.free.beeceptor.com/carconfig')           
-
+  const { data } = useData('http://localhost:5173/api/carmodel');
+        
 return (
   <div className="container">
       <header>
           <h1 className="text-center">Welcome to Car Configurator</h1>
       </header>
       <main>     
-        <CarOptions data={ data } />
+        <CarOptions data={ data }  />
       </main>
   </div>
 )
