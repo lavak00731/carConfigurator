@@ -1,7 +1,6 @@
 import React from 'react'
 import Car from './Car'
 export default function CarOptions( { data } ) {
- console.log(data)
   if(!data) {
     return (
       <p role="alert">Loading</p>
@@ -11,9 +10,9 @@ export default function CarOptions( { data } ) {
   return (
     <ul className="d-flex flex-row list-unstyled column-gap-3">
       {
-        data.map(({ id, cardata }) => (         
-          <li key={id}>
-            <Car cardata={ cardata } id={ id }/>
+        data.map((datum) => (         
+          <li key={datum['id']}>
+            <Car data={datum}/>
           </li>
         )) 
       }

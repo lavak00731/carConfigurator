@@ -7,7 +7,7 @@ export const CarConfig = () => {
   return (
       <Routes>
         <Route path="/" element={<CarSelection />}/>
-        <Route path="/:carId" element={<CarPersonalization/> }/>
+        <Route path="/:carId" element={<CarPersonalization /> }/>
       </Routes>
   )
 }
