@@ -1,0 +1,15 @@
+.chooseStyle {
+    padding: 1rem;
+    color: #FFF;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid transparent;
+}
+.chooseStyle:last-child() {
+    margin-right: 0;
+}
+.chooseStyle span {
+    padding: 0.5rem;
+    background: black;
+    border-radius: 0.5rem;
+}
