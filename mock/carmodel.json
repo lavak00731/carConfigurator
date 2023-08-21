@@ -45,7 +45,7 @@
     },
     "features": {
       "front": [{"colorId": "front1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "front2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "front3", "colorName": "liver", "colorData": "#534B52"}],
-      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "front3", "colorName": "liver", "colorData": "#534B52"}],
+      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "hood3", "colorName": "liver", "colorData": "#534B52"}],
       "back": [{"colorId": "back1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "back3", "colorName": "liver", "colorData": "#534B52"}],
       "sides": [{"colorId": "sides1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "sides3", "colorName": "liver", "colorData": "#534B52"}],
       "roof": [{"colorId": "roof1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "roof3", "colorName": "liver", "colorData": "#534B52"}]
@@ -101,7 +101,7 @@
     },
     "features": {
       "front": [{"colorId": "front1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "front2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "front3", "colorName": "liver", "colorData": "#534B52"}],
-      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "front3", "colorName": "liver", "colorData": "#534B52"}],
+      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "hood3", "colorName": "liver", "colorData": "#534B52"}],
       "back": [{"colorId": "back1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "back3", "colorName": "liver", "colorData": "#534B52"}],
       "sides": [{"colorId": "sides1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "sides3", "colorName": "liver", "colorData": "#534B52"}],
       "roof": [{"colorId": "roof1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "roof3", "colorName": "liver", "colorData": "#534B52"}]

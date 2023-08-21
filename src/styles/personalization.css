@@ -1,9 +1,28 @@
+.nav-tabs .nav-link.active {
+    border-color: black;
+    border-bottom: 1px solid transparent;
+}
+.nav-tabs {
+    border-color: black;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: black;
+}
+.color-container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
 .chooseStyle {
     padding: 1rem;
     color: #FFF;
     border-radius: 0.5rem;
     margin-right: 0.5rem;
     border: 1px solid transparent;
+}
+.chooseStyle:focus-visible {
+    outline: 2px solid red;
 }
 .chooseStyle:last-child() {
     margin-right: 0;
@@ -12,4 +31,8 @@
     padding: 0.5rem;
     background: black;
     border-radius: 0.5rem;
+}
+input[type="radio"]:checked + .chooseStyle span {
+    background: white;
+    color: black;
 }
