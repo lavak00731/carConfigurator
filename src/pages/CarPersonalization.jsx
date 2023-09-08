@@ -23,24 +23,58 @@ export default function CarPersonalization() {
     return <Tab eventKey={ item } key={item} title={ item }><fieldset><legend>Choose a color for <span>{item}</span></legend><div className="color-container">{loopColor(feature, item)}</div></fieldset></Tab>;
   }
   const buildInitValue = (colorId) => {
-   console.log(features);
+    return initialState = {
+      back: null,
+      front: null,
+      hood: null,
+      roof: null, 
+      sides: null
+    }
   }
   const updateSelection = (state, action) => {
-    if(action.type === 'updateSelection') {
-
-      return {
-        ...state,
-   
-      }
+    if(action.type === 'updateSelection') {  
+      switch (action.position) {
+        case "back":
+          return {
+            ...state,
+            back: action.value
+          }
+        case "front":
+          return {
+            ...state,
+            front: action.value
+          }
+        case "hood":
+          return {
+            ...state,
+            hood: action.value
+          }          
+        case "roof":
+          return {
+            ...state,
+            roof: action.value
+          }
+        case "sides":
+          return {
+            ...state,
+            sides: action.value
+          }
+        default:
+          break;
+      }        
     }
   }
 
   const [ state, dispatch ] = useReducer(updateSelection, initialState, buildInitValue);
 
+  const collectorFunc = (event) => {
+    dispatch({type: 'updateSelection', position: event.target.name, value: event.target.value})
+  }
+
   const loopColor = (feature, item) => {
     let colors = [];        
     feature.map( ( {colorId, colorData, colorName } = color  ) => {
-      const btn = <ColorComponent key={colorId} colorId={colorId} colorData={colorData} colorName={colorName} feature={item} />
+      const btn = <ColorComponent key={colorId} colorId={colorId} colorData={colorData} colorName={colorName} feature={item} parentCallBack={collectorFunc}/>
       colors.push(btn);
     });
     return colors;
