@@ -36,3 +36,12 @@ input[type="radio"]:checked + .chooseStyle span {
     background: white;
     color: black;
 }
+.img-wrapper {
+    position: relative
+}
+.img-wrapper .color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}

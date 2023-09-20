@@ -67,7 +67,7 @@
       },
     "pictures": {
       "45": {
-        "base": "bigvan/45/45base.jpg",        
+        "base": "bigvan/45/base45.jpg",        
         "hood": ["bigvan/45/hood-blue45.png", "bigvan/45/hood-bone45.png", "bigvan/45/hood-liver45.png"],
         "roof": ["bigvan/45/roof-blue45.png", "bigvan/45/roof-bone45.png", "bigvan/45/roof-liver45.png"],
         "sides": ["bigvan/45/side-blue45.png", "bigvan/45/side-bone45.png", "bigvan/45/side-liver45.png"],
