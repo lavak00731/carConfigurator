@@ -2,15 +2,20 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { getFeatures } from '../assets/utilities/utilities';
 export default function CarouselComp({ data, selection }) {
+      const isHidden = (selection, root) => {
+        
+        return selection[Object.keys(root)[1]] === Object.values(root)[1]
+
+ 
+      }
       const putColors = (colorRoots, section) => {
         let colors = [];
-        colorRoots.map((root) =>{
-          console.log(selection[section])
-          colors.push(<img key={root} className='color' src={'/src/assets/'+root} alt="" hidden={selection[section]}/>)
+        colorRoots.map((root) => {
+          colors.push(<img key={root.url} className='color' src={'/src/assets/'+root.url} alt="" hidden={!isHidden(selection, root)}/>)
         })
         return colors
       }
-      const renderColors = (picture) => {        
+      const renderColors = (picture) => {
         const pictureTypes = Object.keys(picture);
         let carSections  = [];
         let colorTypes = [];
@@ -19,7 +24,7 @@ export default function CarouselComp({ data, selection }) {
             carSections.push(pictureType)
           }
         });
-        carSections.map((carSection) =>{
+        carSections.map((carSection) => {
           colorTypes.push(putColors(picture[carSection], carSection))
         })
         return colorTypes;

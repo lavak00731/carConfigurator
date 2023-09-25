@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useReducer } from 'react';
-import ColorComponent from './ColorComponent';
+import ColorComponent from '../components/ColorComponent';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { getFeatures } from '../assets/utilities/utilities';
@@ -70,7 +70,7 @@ export default function CarPersonalization() {
     feature.map( ( {colorId, colorData, colorName } = color  ) => {
       const btn = <ColorComponent key={colorId} colorId={colorId} colorData={colorData} colorName={colorName} feature={item} parentCallBack={collectorFunc}/>
       colors.push(btn);
-    });
+    });    
     return colors;
   }
   
