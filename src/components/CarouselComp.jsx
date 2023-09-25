@@ -1,12 +1,10 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import { useState } from 'react';
 import { getFeatures } from '../assets/utilities/utilities';
 export default function CarouselComp({ data, selection }) {
-      const isHidden = (selection, root) => {
-        
-        return selection[Object.keys(root)[1]] === Object.values(root)[1]
-
- 
+      const isHidden = (selection, root) => {        
+        return selection[Object.keys(root)[1]] === Object.values(root)[1] 
       }
       const putColors = (colorRoots, section) => {
         let colors = [];
@@ -15,6 +13,10 @@ export default function CarouselComp({ data, selection }) {
         })
         return colors
       }
+      const [index, setIndex] = useState(0);
+      const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+      };
       const renderColors = (picture) => {
         const pictureTypes = Object.keys(picture);
         let carSections  = [];
@@ -42,7 +44,7 @@ export default function CarouselComp({ data, selection }) {
       }
   return (
     <>
-        <Carousel interval={null}>
+        <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
             {
               getFeatures(data, getCarouselContent)
             }
