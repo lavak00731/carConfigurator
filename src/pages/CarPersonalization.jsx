@@ -7,7 +7,8 @@ import './../styles/personalization.css';
 export default function CarPersonalization() {
   const location = useLocation();
   const { cardata, features, pictures } = location.state;
-  
+  const [tabSelection, SetTabSelection] = useState('hood');
+
   let initialState = {};
   
   const buildInitValue = (colorId) => {
@@ -19,6 +20,7 @@ export default function CarPersonalization() {
       sides: null
     }
   }
+
   const updateSelection = (state, action) => {
     if(action.type === 'updateSelection') {  
       switch (action.position) {
@@ -52,13 +54,12 @@ export default function CarPersonalization() {
       }        
     }
   }
-
   const [ state, dispatch ] = useReducer(updateSelection, initialState, buildInitValue);
-
+  
   const collectorFunc = (event) => {
     dispatch({type: 'updateSelection', position: event.target.name, value: event.target.value})
   }  
-
+  
   return (
     <main className="container">
       <div className="row d-flex">
@@ -66,10 +67,10 @@ export default function CarPersonalization() {
           <h1 className="text-center">{ cardata['Name'] }</h1>
         </header>
         <div className="col-sm-12 col-lg-8 order-lg-2">
-          <CarouselComp data={ pictures } selection={ state }/>
+          <CarouselComp data={ pictures } selection={ state } tabSelection={ tabSelection }/>
         </div>
         <div className="col-sm-12 col-lg-4 order-lg-1">
-          <TabsComp features={ features } triggerFunc={ collectorFunc }/>
+          <TabsComp features={ features } triggerFunc={ collectorFunc } onTab={ SetTabSelection }/>
         </div>
         
       </div>
