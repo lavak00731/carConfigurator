@@ -1,14 +1,10 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import { useState, memo } from 'react';
+import { useState, memo, useEffect } from 'react';
 import { getFeatures } from '../assets/utilities/utilities';
-function CarouselComp({ data, selection, tabSelection }) {
+const CarouselComp = memo(function CarouselComp({ data, selection, tabSelection }) {
       const [index, setIndex] = useState(0);
 
-      const isHidden = (selection, root) => {   
-        return selection[Object.keys(root)[1]] === Object.values(root)[1] 
-      }
-      
       const viewIndex = (tabSelection) => {
         switch (tabSelection) {
           case 'front':
@@ -24,12 +20,20 @@ function CarouselComp({ data, selection, tabSelection }) {
         }
       }
 
-      if( viewIndex(tabSelection) !== index && index !==  localStorage.getItem('carView') ) {
-        localStorage.setItem('carView', viewIndex(tabSelection));
-        setIndex(viewIndex(tabSelection));
-      }
+      useEffect(() => {
+        if( tabSelection !==  localStorage.getItem('carView') ) {
+          localStorage.setItem('carView', tabSelection);
+          setIndex(viewIndex(tabSelection));
+        }
+        return () => {
+          localStorage.removeItem('carView');
+        };
+      }, [tabSelection]);
 
-       
+      const isHidden = (selection, root) => {   
+        return selection[Object.keys(root)[1]] === Object.values(root)[1] 
+      }
+      
       const putColors = (colorRoots) => {
         let colors = [];
         colorRoots.map((root) => {
@@ -77,5 +81,5 @@ function CarouselComp({ data, selection, tabSelection }) {
         </Carousel>        
     </>
   )
-}
-export default React.memo(CarouselComp);
+})
+export default CarouselComp;

@@ -11,7 +11,7 @@ export default function CarPersonalization() {
 
   let initialState = {};
   
-  const buildInitValue = (colorId) => {
+  const buildInitValue = () => {
     return initialState = {
       back: null,
       front: null,
@@ -19,6 +19,26 @@ export default function CarPersonalization() {
       roof: null, 
       sides: null
     }
+  }
+ 
+  const locationAssemble = (state) => {
+    let hashString = "";
+    for (const key in state) {
+      if(state.hasOwnProperty(key) && state[key]) {
+        hashString = hashString.concat(key+'='+state[key]+'?');
+      }
+    }
+    return hashString
+  }
+
+  const writeUrl = (state) => {
+    const hashUrl = locationAssemble(state);
+    if(hashUrl !== '#') {
+      location.hash = hashUrl;
+      console.log(location)
+      //window.history.pushState(null, '', location.pathname+'#'+hashUrl);
+    }
+    
   }
 
   const updateSelection = (state, action) => {
@@ -55,9 +75,11 @@ export default function CarPersonalization() {
     }
   }
   const [ state, dispatch ] = useReducer(updateSelection, initialState, buildInitValue);
+
+  writeUrl(state);
   
   const collectorFunc = (event) => {
-    dispatch({type: 'updateSelection', position: event.target.name, value: event.target.value})
+    dispatch({type: 'updateSelection', position: event.target.name, value: event.target.value});
   }  
   
   return (
