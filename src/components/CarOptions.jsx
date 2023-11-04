@@ -1,7 +1,7 @@
 import React from 'react'
 import Car from './Car'
-export default function CarOptions( { data } ) {
-  if(!data) {
+export default function CarOptions( { data, isLoading } ) {
+  if(isLoading) {
     return (
       <p role="alert">Loading</p>
     )

@@ -16,7 +16,7 @@ export default function Car({data: {id, cardata, features, pictures}}) {
                 <li className="list-group-item"><strong>Origin:</strong> {cardata['Origin']}</li>
             </ul>
             <div className="card-footer">
-              <Link to={`/${id}`} state={{cardata, features, pictures}} className="btn btn-primary">Select car <span className="visually-hidden">{cardata['Name']}</span></Link>
+              <Link to={`/${id}`} className="btn btn-primary">Select car <span className="visually-hidden">{cardata['Name']}</span></Link>
             </div>
         </div>
     </div>
