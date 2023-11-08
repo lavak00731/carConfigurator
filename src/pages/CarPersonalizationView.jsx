@@ -1,4 +1,4 @@
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import TabsComp from '../components/TabsComp';
 import CarouselComp from '../components/CarouselComp';
@@ -20,34 +20,13 @@ export default function CarPersonalizationView({data}) {
       sides: null
     }
   }
- 
-  const locationAssemble = (state) => {
-    let hashString = "";
-    for (const key in state) {
-      if(state.hasOwnProperty(key) && state[key]) {
-        hashString = hashString.concat(key+'='+state[key]+'?');
-      }
-    }
-    return hashString
-  }
-
-  const writeUrl = (state) => {
-    const hashUrl = locationAssemble(state);
-    if(hashUrl !== '#') {
-      location.hash = hashUrl;
-      //console.log(location)
-      //window.history.pushState(null, '', location.pathname+'#'+hashUrl);
-    }
-    
-  }
-
   const updateSelection = (state, action) => {
     if(action.type === 'updateSelection') {  
       switch (action.position) {
         case "back":
           return {
             ...state,
-            back: action.value
+            back: action.value            
           }
         case "front":
           return {
@@ -71,17 +50,36 @@ export default function CarPersonalizationView({data}) {
           }
         default:
           break;
-      }        
+      }            
     }
   }
   const [ state, dispatch ] = useReducer(updateSelection, initialState, buildInitValue);
 
-  writeUrl(state);
-  
-  const collectorFunc = (event) => {
+  const collectorFunc = (event) => {    
     dispatch({type: 'updateSelection', position: event.target.name, value: event.target.value});
   }  
-  
+
+  const locationAssemble = (state) => {
+    let hashString = "";
+    for (const key in state) {
+      if(state.hasOwnProperty(key) && state[key]) {
+        hashString = hashString.concat(key+'='+state[key]+'?');
+      }
+    }
+    return hashString
+  }
+
+  const writeUrl = (state) => {          
+      const hashUrl = locationAssemble(state);
+      if(hashUrl !== '#' && hashUrl) {
+          window.history.replaceState({},"" ,carId) 
+          location.hash = hashUrl;          
+      } 
+  }
+  useEffect(() => {
+    writeUrl(state)    
+  }, [state]); 
+
   return (
       <div className="row d-flex">
         <header className="col-12">
