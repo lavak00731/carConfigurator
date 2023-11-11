@@ -69,6 +69,21 @@ export default function CarPersonalizationView({data}) {
     return hashString
   }
 
+  const readHashUrl = () => {
+    if(location.hash) {
+      const locationParameters = location.hash;
+      const locationParamsWithoutHash = locationParameters.split('#');
+      const locationParams = locationParamsWithoutHash[1].split('?');
+      locationParams.forEach((param, i) => {
+        if(i !== locationParams.length - 1) {
+          const propAndValues = param.split('=');
+          console.log(propAndValues)
+          dispatch({type: 'updateSelection', position: propAndValues[0], value: propAndValues[1]});
+        }
+      });
+    }    
+  }
+
   const writeUrl = (state) => {          
       const hashUrl = locationAssemble(state);
       if(hashUrl !== '#' && hashUrl) {
@@ -76,8 +91,31 @@ export default function CarPersonalizationView({data}) {
           location.hash = hashUrl;          
       } 
   }
+  const isNullish = (state)=>{
+    const stateIsNull = Object.values(state).every(value => {
+      if (value === null) {
+        return true;
+      }
+    
+      return false;
+    });
+    return stateIsNull;
+  }
+
+  const resetFeature = (event) => {
+      const item = event.target.dataset.feature;
+      if(location.hash !== "") {
+          dispatch({type: 'updateSelection', position: item, value: null });
+          document.querySelector('[name="'+item+'"]').checked = false;
+      }        
+  }
+
   useEffect(() => {
-    writeUrl(state)    
+    writeUrl(state);
+    console.log(isNullish(state))
+    if(isNullish(state)) {
+      readHashUrl(); 
+    }  
   }, [state]); 
 
   return (
@@ -89,7 +127,7 @@ export default function CarPersonalizationView({data}) {
           <CarouselComp data={ pictures } selection={ state } tabSelection={ tabSelection }/>
         </div>
         <div className="col-sm-12 col-lg-4 order-lg-1">
-          <TabsComp features={ features } triggerFunc={ collectorFunc } onTab={ SetTabSelection }/>
+          <TabsComp features={ features } triggerFunc={ collectorFunc } onTab={ SetTabSelection } resetFeature={ resetFeature } selection={ state }/>
         </div>        
       </div>
   )
