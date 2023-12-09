@@ -1,17 +1,16 @@
-import { useFetch } from './../service/useFetch';
 import CarOptions from "./../components/CarOptions";
+import { useAppContent } from "../context/AppContext";
 
 export default function CarSelection() {
+    const { originalData, isLoading } = useAppContent();
 
-  const { data, isLoading } = useFetch('http://localhost:5173/api/carmodel');
-      
   return (
     <div className="container">
         <header>
             <h1 className="text-center">Welcome to Car Configurator</h1>
         </header>
         <main>     
-          <CarOptions data={ data } isLoading={ isLoading }  />
+          {<CarOptions data={ originalData } isLoading={ isLoading }  />}
         </main>
     </div>
   )

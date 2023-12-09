@@ -1,6 +1,7 @@
-[{
-  "id": "1",
-  "cardata": {
+[
+  {
+    "id": "1",
+    "cardata": {
       "Name": "Dodge d200",
       "Miles_per_Gallon": 11,
       "Cylinders": 8,
@@ -14,96 +15,235 @@
     "pictures": {
       "45": {
         "base": "van/45/45base.jpg",
-        "hood": [{"url": "van/45/45-hoodblue.png", "hood": "blue"}, {"url": "van/45/45-hoodbone.png", "hood": "bone"}, {"url": "van/45/45-hoodliver.png", "hood": "liver"}],
-        "roof": [{"url": "van/45/45-roofblue.png", "roof": "blue"}, {"url": "van/45/45-roofbone.png", "roof": "bone"}, {"url": "van/45/45-roofliver.png", "roof": "liver"}],
-        "sides": [{"url": "van/45/45-sidesblue.png", "sides": "blue"}, {"url": "van/45/45-sidesbone.png", "sides": "bone"}, {"url": "van/45/45-sidesliver.png", "sides": "liver"}]
+        "hood": [
+          { "url": "van/45/45-hoodblue.png", "hood": "blue" },
+          { "url": "van/45/45-hoodbone.png", "hood": "bone" },
+          { "url": "van/45/45-hoodliver.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "van/45/45-roofblue.png", "roof": "blue" },
+          { "url": "van/45/45-roofbone.png", "roof": "bone" },
+          { "url": "van/45/45-roofliver.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "van/45/45-sidesblue.png", "sides": "blue" },
+          { "url": "van/45/45-sidesbone.png", "sides": "bone" },
+          { "url": "van/45/45-sidesliver.png", "sides": "liver" }
+        ]
       },
       "back": {
         "base": "van/back/backbase.jpg",
-        "back": [{"url": "van/back/backblue.png", "back": "blue"}, {"url": "van/back/backbone.png", "back": "bone"}, {"url": "van/back/backliver.png", "back": "liver"}]
+        "back": [
+          { "url": "van/back/backblue.png", "back": "blue" },
+          { "url": "van/back/backbone.png", "back": "bone" },
+          { "url": "van/back/backliver.png", "back": "liver" }
+        ]
       },
       "front": {
         "base": "van/front/frontbase.jpg",
-        "hood": [{"url": "van/front/front-hoodblue.png", "hood": "blue"}, {"url": "van/front/front-hoodbone.png", "hood": "bone"}, {"url": "van/front/front-hoodliver.png", "hood": "liver"}],
-        "roof": [{"url":"van/front/front-roofblue.png", "roof": "blue"}, {"url": "van/front/front-roofbone.png", "roof": "bone"}, {"url": "van/front/front-roofliver.png", "roof": "liver"}],
-        "sides": [{"url": "van/front/front-sidesblue.png", "sides": "blue"}, {"url": "van/front/front-sidesbone.png", "sides": "bone"}, {"url": "van/front/front-sidesliver.png", "sides": "liver"}]
+        "hood": [
+          { "url": "van/front/front-hoodblue.png", "hood": "blue" },
+          { "url": "van/front/front-hoodbone.png", "hood": "bone" },
+          { "url": "van/front/front-hoodliver.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "van/front/front-roofblue.png", "roof": "blue" },
+          { "url": "van/front/front-roofbone.png", "roof": "bone" },
+          { "url": "van/front/front-roofliver.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "van/front/front-sidesblue.png", "sides": "blue" },
+          { "url": "van/front/front-sidesbone.png", "sides": "bone" },
+          { "url": "van/front/front-sidesliver.png", "sides": "liver" }
+        ]
       },
       "left": {
         "base": "van/left/leftbase.jpg",
-        "left": [{"url": "van/left/left-blue.png", "sides": "blue"}, {"url": "van/left/left-bone.png", "sides": "bone"}, {"url": "van/left/left-liver.png", "sides": "liver"}]
+        "left": [
+          { "url": "van/left/left-blue.png", "sides": "blue" },
+          { "url": "van/left/left-bone.png", "sides": "bone" },
+          { "url": "van/left/left-liver.png", "sides": "liver" }
+        ]
       },
       "right": {
         "base": "van/right/rightbase.jpg",
-        "right": [{"url": "van/right/right-blue.png", "sides": "blue"}, {"url": "van/right/right-bone.png", "sides": "bone"}, {"url": "van/right/right-liver.png", "sides": "liver"}]
+        "right": [
+          { "url": "van/right/right-blue.png", "sides": "blue" },
+          { "url": "van/right/right-bone.png", "sides": "bone" },
+          { "url": "van/right/right-liver.png", "sides": "liver" }
+        ]
       },
       "top": {
         "base": "van/top/topbase.jpg",
-        "hood": [{"url": "van/top/top-hoodblue.png", "hood": "blue"}, {"url": "van/top/top-hoodbone.png", "hood": "bone"}, {"url": "van/top/top-hoodliver.png", "hood": "liver"}],
-        "roof": [{"url": "van/top/top-roofblue.png", "roof": "blue"}, {"url": "van/top/top-roofbone.png", "roof": "bone"}, {"url": "van/top/top-roofliver.png", "roof": "liver"}],
-        "sides": [{"url": "van/top/top-sidesblue.png", "sides": "blue"}, {"url":"van/top/top-sidesbone.png", "sides": "bone"}, {"url": "van/top/top-sidesliver.png", "sides": "liver"}]
+        "hood": [
+          { "url": "van/top/top-hoodblue.png", "hood": "blue" },
+          { "url": "van/top/top-hoodbone.png", "hood": "bone" },
+          { "url": "van/top/top-hoodliver.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "van/top/top-roofblue.png", "roof": "blue" },
+          { "url": "van/top/top-roofbone.png", "roof": "bone" },
+          { "url": "van/top/top-roofliver.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "van/top/top-sidesblue.png", "sides": "blue" },
+          { "url": "van/top/top-sidesbone.png", "sides": "bone" },
+          { "url": "van/top/top-sidesliver.png", "sides": "liver" }
+        ]
       }
     },
     "features": {
-      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "hood3", "colorName": "liver", "colorData": "#534B52"}],
-      "back": [{"colorId": "back1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "back3", "colorName": "liver", "colorData": "#534B52"}],
-      "sides": [{"colorId": "sides1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "sides3", "colorName": "liver", "colorData": "#534B52"}],
-      "roof": [{"colorId": "roof1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "roof3", "colorName": "liver", "colorData": "#534B52"}]
+      "hood": [
+        { "colorId": "hood1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "hood3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "back": [
+        { "colorId": "back1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "back3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "sides": [
+        { "colorId": "sides1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "sides3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "roof": [
+        { "colorId": "roof1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "roof3", "colorName": "liver", "colorData": "#534B52" }
+      ]
     }
-
   },
   {
     "id": "2",
     "cardata": {
-        "Name": "AMC gremlin",
-        "Miles_per_Gallon": 19,
-        "Cylinders": 6,
-        "Horsepower": 100,
-        "Weight_in_lbs": 2634,
-        "Acceleration": 13,
-        "Year": "2020",
-        "Origin": "USA",
-        "picture": "bigvan/45/base45.jpg"
-      },
+      "Name": "AMC gremlin",
+      "Miles_per_Gallon": 19,
+      "Cylinders": 6,
+      "Horsepower": 100,
+      "Weight_in_lbs": 2634,
+      "Acceleration": 13,
+      "Year": "2020",
+      "Origin": "USA",
+      "picture": "bigvan/45/base45.jpg"
+    },
     "pictures": {
       "45": {
-        "base": "bigvan/45/base45.jpg",        
-        "hood": [{"url": "bigvan/45/hood-blue45.png", "hood": "blue"}, {"url": "bigvan/45/hood-bone45.png", "hood": "bone"}, {"url": "bigvan/45/hood-liver45.png", "hood": "liver"}],
-        "roof": [{"url": "bigvan/45/roof-blue45.png", "roof": "blue"}, {"url": "bigvan/45/roof-bone45.png", "roof": "bone"}, {"url": "bigvan/45/roof-liver45.png", "roof": "liver"}],
-        "sides": [{"url": "bigvan/45/side-blue45.png", "sides": "blue"}, {"url": "bigvan/45/side-bone45.png", "sides": "bone"}, {"url": "bigvan/45/side-liver45.png", "sides": "liver"}],
-        "front": [{"url": "bigvan/45/front-blue45.png", "front": "blue"}, {"url": "bigvan/45/front-bone45.png", "front": "bone"}, {"url": "bigvan/45/front-liver45.png", "front": "liver"}]
+        "base": "bigvan/45/base45.jpg",
+        "hood": [
+          { "url": "bigvan/45/hood-blue45.png", "hood": "blue" },
+          { "url": "bigvan/45/hood-bone45.png", "hood": "bone" },
+          { "url": "bigvan/45/hood-liver45.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "bigvan/45/roof-blue45.png", "roof": "blue" },
+          { "url": "bigvan/45/roof-bone45.png", "roof": "bone" },
+          { "url": "bigvan/45/roof-liver45.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "bigvan/45/side-blue45.png", "sides": "blue" },
+          { "url": "bigvan/45/side-bone45.png", "sides": "bone" },
+          { "url": "bigvan/45/side-liver45.png", "sides": "liver" }
+        ],
+        "front": [
+          { "url": "bigvan/45/front-blue45.png", "front": "blue" },
+          { "url": "bigvan/45/front-bone45.png", "front": "bone" },
+          { "url": "bigvan/45/front-liver45.png", "front": "liver" }
+        ]
       },
       "back": {
         "base": "bigvan/back/backbase.jpg",
-        "back": [{"url":"bigvan/back/backblue.png", "back": "blue"}, {"url": "bigvan/back/backbone.png", "back": "bone"}, {"url": "bigvan/back/backliver.png", "back": "liver"}]
+        "back": [
+          { "url": "bigvan/back/backblue.png", "back": "blue" },
+          { "url": "bigvan/back/backbone.png", "back": "bone" },
+          { "url": "bigvan/back/backliver.png", "back": "liver" }
+        ]
       },
       "front": {
         "base": "bigvan/front/frontbase.jpg",
-        "hood": [{"url": "bigvan/front/front-hoodblue.png", "hood": "blue"}, {"url": "bigvan/front/front-hoodbone.png", "hood": "bone"}, {"url": "bigvan/front/front-hoodliver.png", "hood": "liver"}],
-        "roof": [{"url": "bigvan/front/front-roofblue.png", "roof": "blue"}, {"url": "bigvan/front/front-roofbone.png", "roof": "bone"}, {"url": "bigvan/front/front-roofliver.png", "roof": "liver"}],
-        "sides": [{"url": "bigvan/front/front-sidesblue.png", "sides": "blue"},{"url": "bigvan/front/front-sidesbone.png", "sides": "bone"}, {"url": "bigvan/front/front-sidesliver.png", "sides": "liver"}],
-        "front": [{"url": "bigvan/front/front-blue.png", "front": "blue"}, {"url": "bigvan/front/front-bone.png", "front": "bone"}, {"url": "bigvan/front/front-liver.png", "front": "liver"}]
+        "hood": [
+          { "url": "bigvan/front/front-hoodblue.png", "hood": "blue" },
+          { "url": "bigvan/front/front-hoodbone.png", "hood": "bone" },
+          { "url": "bigvan/front/front-hoodliver.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "bigvan/front/front-roofblue.png", "roof": "blue" },
+          { "url": "bigvan/front/front-roofbone.png", "roof": "bone" },
+          { "url": "bigvan/front/front-roofliver.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "bigvan/front/front-sidesblue.png", "sides": "blue" },
+          { "url": "bigvan/front/front-sidesbone.png", "sides": "bone" },
+          { "url": "bigvan/front/front-sidesliver.png", "sides": "liver" }
+        ],
+        "front": [
+          { "url": "bigvan/front/front-blue.png", "front": "blue" },
+          { "url": "bigvan/front/front-bone.png", "front": "bone" },
+          { "url": "bigvan/front/front-liver.png", "front": "liver" }
+        ]
       },
       "left": {
         "base": "bigvan/left/leftbase.jpg",
-        "left": [{"url":"bigvan/left/left-blue.png", "sides": "blue"}, {"url":"bigvan/left/left-bone.png", "sides": "bone"}, {"url":"bigvan/left/left-liver.png", "sides": "liver"}]
+        "left": [
+          { "url": "bigvan/left/left-blue.png", "sides": "blue" },
+          { "url": "bigvan/left/left-bone.png", "sides": "bone" },
+          { "url": "bigvan/left/left-liver.png", "sides": "liver" }
+        ]
       },
       "right": {
         "base": "bigvan/right/rightbase.jpg",
-        "right": [{"url":"bigvan/right/right-blue.png", "sides": "blue"}, {"url":"bigvan/right/right-bone.png", "sides": "bone"}, {"url":"bigvan/right/right-liver.png", "sides": "liver"}]
+        "right": [
+          { "url": "bigvan/right/right-blue.png", "sides": "blue" },
+          { "url": "bigvan/right/right-bone.png", "sides": "bone" },
+          { "url": "bigvan/right/right-liver.png", "sides": "liver" }
+        ]
       },
       "top": {
         "base": "bigvan/top/topbase.jpg",
-        "hood": [{"url": "bigvan/top/top-hoodblue.png", "hood": "blue"}, {"url": "bigvan/top/top-hoodbone.png", "hood": "bone"}, {"url": "bigvan/top/top-hoodliver.png", "hood": "liver"}],
-        "roof": [{"url": "bigvan/top/top-roofblue.png", "roof": "blue"}, {"url": "bigvan/top/top-roofbone.png", "roof": "bone" }, {"url": "bigvan/top/top-roofliver.png", "roof": "liver"}],
-        "sides": [{"url": "bigvan/top/top-sidesblue.png","sides": "blue"}, {"url": "bigvan/top/top-sidesbone.png", "sides": "bone"}, {"url": "bigvan/top/top-sidesliver.png","sides": "liver"}]
+        "hood": [
+          { "url": "bigvan/top/top-hoodblue.png", "hood": "blue" },
+          { "url": "bigvan/top/top-hoodbone.png", "hood": "bone" },
+          { "url": "bigvan/top/top-hoodliver.png", "hood": "liver" }
+        ],
+        "roof": [
+          { "url": "bigvan/top/top-roofblue.png", "roof": "blue" },
+          { "url": "bigvan/top/top-roofbone.png", "roof": "bone" },
+          { "url": "bigvan/top/top-roofliver.png", "roof": "liver" }
+        ],
+        "sides": [
+          { "url": "bigvan/top/top-sidesblue.png", "sides": "blue" },
+          { "url": "bigvan/top/top-sidesbone.png", "sides": "bone" },
+          { "url": "bigvan/top/top-sidesliver.png", "sides": "liver" }
+        ]
       }
     },
     "features": {
-      "hood": [{"colorId": "hood1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "hood3", "colorName": "liver", "colorData": "#534B52"}],
-      "front": [{"colorId": "front1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "front2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "front3", "colorName": "liver", "colorData": "#534B52"}],
-      "back": [{"colorId": "back1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "back3", "colorName": "liver", "colorData": "#534B52"}],
-      "sides": [{"colorId": "sides1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "sides3", "colorName": "liver", "colorData": "#534B52"}],
-      "roof": [{"colorId": "roof1", "colorName": "blue", "colorData": "#247BA0"}, {"colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF"}, {"colorId": "roof3", "colorName": "liver", "colorData": "#534B52"}]
+      "hood": [
+        { "colorId": "hood1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "hood2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "hood3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "front": [
+        { "colorId": "front1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "front2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "front3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "back": [
+        { "colorId": "back1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "back2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "back3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "sides": [
+        { "colorId": "sides1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "sides2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "sides3", "colorName": "liver", "colorData": "#534B52" }
+      ],
+      "roof": [
+        { "colorId": "roof1", "colorName": "blue", "colorData": "#247BA0" },
+        { "colorId": "roof2", "colorName": "bone", "colorData": "#E0DDCF" },
+        { "colorId": "roof3", "colorName": "liver", "colorData": "#534B52" }
+      ]
     }
-    
-  }]
+  }
+]

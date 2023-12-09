@@ -1,13 +1,22 @@
-import {Route, Routes} from 'react-router-dom';
-import CarSelection from './pages/CarSelection';
-import CarPersonalization from './pages/CarPersonalization';
+import { Route, Routes, Outlet } from "react-router-dom";
+import { AppProvider } from "./context/AppContext";
+import CarPersonalization from "./pages/CarPersonalization";
+import CarSelection from "./pages/CarSelection";
 
-
-export const CarConfig = () => { 
+export const CarConfig = () => {
   return (
-      <Routes>
-        <Route path="/" element={<CarSelection />}/>
-        <Route path="/:carId" element={<CarPersonalization /> }/>
-      </Routes>
-  )
-}
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <AppProvider>
+            <Outlet />
+          </AppProvider>
+        }
+      >
+        <Route path="/" element={ <CarSelection/> } />
+        <Route path="/:carId" element={ <CarPersonalization /> } />
+      </Route>
+    </Routes>
+  );
+};
