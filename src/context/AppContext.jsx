@@ -24,7 +24,6 @@ export const AppProvider = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         if (!data) throw new Error("Could not fetch any data");
         setOriginalData(data) 
         const selectedCar = (data ?? []).find(

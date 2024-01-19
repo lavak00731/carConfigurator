@@ -1,7 +1,8 @@
 import React from 'react'
 import Car from './Car'
 export default function CarOptions( { data, isLoading } ) {
-  if(!isLoading) {
+  console.log(data)
+  if(!isLoading && data.length === 0) {
     return (
       <p role="alert">Loading</p>
     )
