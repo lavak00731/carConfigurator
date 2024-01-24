@@ -3,7 +3,11 @@ import { useAppContent } from "../context/AppContext";
 
 export default function CarSelection() {
     const { originalData, isLoading } = useAppContent();
-
+    if(isLoading && Object.keys(originalData)) {
+      return (
+        <p role="alert">Loading</p>
+      )
+    }
   return (
     <div className="container">
         <header>

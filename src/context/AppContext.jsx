@@ -7,7 +7,13 @@ export const AppProvider = ({ children }) => {
   const { carId } = useParams();
   const [ originalData, setOriginalData ] = useState({})
   const [carData, setCarData] = useState(null);
-  const [carSelections, setCarSelections] = useState({});
+  const [carSelections, setCarSelections] = useState({
+    "hood": null,
+    "front": null,
+    "roof": null,
+    "sides": null,
+    "back": null
+  });
   const [isLoading, setIsLoading] = useState(true);
 
   function updateCarSelections(payload) {

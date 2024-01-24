@@ -5,13 +5,12 @@ import TabsComp from "../components/TabsComp";
 import "./../styles/personalization.css";
 
 export default function CarPersonalization() {
-  const { carData, isLoading } = useAppContent();
+  const { carData, carSelections, updateCarSelections, isLoading } = useAppContent();
   const [tabSelection, setTabSelection] = useState("hood");
-
   if (!carData || isLoading) {
     return <p role="alert">Loading</p>;
   }
-
+  
   return (
     <main className="container">
       <div className="row d-flex">
@@ -20,11 +19,11 @@ export default function CarPersonalization() {
         </header>
 
         <div className="col-sm-12 col-lg-8 order-lg-2">
-          {/* <CarouselComp
+          <CarouselComp
             data={carData.pictures}
-            selection={state["selection"]}
+            selection={carSelections}
             tabSelection={tabSelection}
-          /> */}
+          /> 
         </div>
 
         <div className="col-sm-12 col-lg-4 order-lg-1">
