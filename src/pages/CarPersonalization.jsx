@@ -27,12 +27,11 @@ export default function CarPersonalization() {
         </div>
 
         <div className="col-sm-12 col-lg-4 order-lg-1">
-          {/* <TabsComp
+          <TabsComp
             features={carData.features}
             onTab={setTabSelection}
-            resetFeature={resetFeature}
-            selection={state["selection"]}
-          /> */}
+            selection={carSelections}
+          />
         </div>
       </div>
     </main>

@@ -11,13 +11,13 @@ const CarouselComp = memo(function CarouselComp({
   const viewIndex = (tabSelection) => {
     switch (tabSelection) {
       case "front":
-        return 2;
-      case "back":
         return 1;
-      case "sides":
-        return 3;
-      case "roof":
+      case "back":
         return 5;
+      case "sides":
+        return 2;
+      case "roof":
+        return 4;
       default:
         return 0;
     }
