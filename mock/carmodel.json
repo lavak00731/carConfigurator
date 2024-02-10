@@ -14,12 +14,36 @@
     },
     "pictures": {
       "base": [
-        {"position": "45", "url": "van/45/45base.jpg", "id": "a"},
-        {"position": "front", "url": "van/front/frontbase.jpg", "id": "b"},
-        {"position": "left", "url": "van/left/leftbase.jpg",  "id": "c"},
-        {"position": "right", "url": "van/right/rightbase.jpg",  "id": "d"},
-        {"position": "top", "url": "van/top/topbase.jpg",  "id": "e"},
-        {"position": "back", "url": "van/back/backbase.jpg",  "id": "f"}
+        {
+          "position": "45",
+          "url": "van/45/45base.jpg",
+          "id": "a"
+        },
+        {
+          "position": "front",
+          "url": "van/front/frontbase.jpg",
+          "id": "b"
+        },
+        {
+          "position": "left",
+          "url": "van/left/leftbase.jpg",
+          "id": "c"
+        },
+        {
+          "position": "right",
+          "url": "van/right/rightbase.jpg",
+          "id": "d"
+        },
+        {
+          "position": "top",
+          "url": "van/top/topbase.jpg",
+          "id": "e"
+        },
+        {
+          "position": "back",
+          "url": "van/back/backbase.jpg",
+          "id": "f"
+        }
       ],
       "angles": [
         {
@@ -59,7 +83,7 @@
         },
         {
           "url": "van/45/45-roofliver.png",
-          "position":"45",
+          "position": "45",
           "angle": "roof",
           "color": "liver",
           "id": 55
@@ -73,14 +97,14 @@
         },
         {
           "url": "van/45/45-sidesbone.png",
-          "position":"45",
+          "position": "45",
           "angle": "sides",
           "color": "bone",
           "id": 57
         },
         {
           "url": "van/45/45-sidesliver.png",
-          "position":"45",
+          "position": "45",
           "angle": "sides",
           "color": "liver",
           "id": 58
@@ -136,7 +160,7 @@
         },
         {
           "url": "van/front/front-roofbone.png",
-          "position":"front",
+          "position": "front",
           "angle": "roof",
           "color": "bone",
           "id": 66
@@ -164,7 +188,7 @@
         },
         {
           "url": "van/front/front-sidesliver.png",
-          "position":"front",
+          "position": "front",
           "angle": "sides",
           "color": "liver",
           "id": 70
@@ -276,93 +300,101 @@
         }
       ]
     },
-    "features": [
-      {
-        "position": "hood",
-        "colorId": "hood1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "hood",
-        "colorId": "hood2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "hood",
-        "colorId": "hood3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "sides",
-        "colorId": "sides1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "sides",
-        "colorId": "sides2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-
-      },
-      {
-        "position": "sides",
-        "colorId": "sides3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",          
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      }
-    ]
+    "features": {
+      "tabs": [
+        "hood",
+        "front",
+        "back",
+        "sides",
+        "roof"
+      ],
+      "colors": [
+        {
+          "position": "hood",
+          "colorId": "hood1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "hood",
+          "colorId": "hood2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "hood",
+          "colorId": "hood3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        }
+      ]
+    }
   },
   {
     "id": "2",
@@ -379,12 +411,36 @@
     },
     "pictures": {
       "base": [
-        {"position": "45", "url": "bigvan/45/base45.jpg", "id": "h"},
-        {"position": "front", "url": "bigvan/front/frontbase.jpg", "id": "i"},
-        {"position": "left", "url": "bigvan/left/leftbase.jpg", "id": "j"},
-        {"position": "right", "url": "bigvan/right/rightbase.jpg", "id": "k"},
-        {"position": "top", "url": "bigvan/top/topbase.jpg", "id": "l"},
-        {"position": "back", "url": "bigvan/back/backbase.jpg", "id": "m"}
+        {
+          "position": "45",
+          "url": "bigvan/45/base45.jpg",
+          "id": "h"
+        },
+        {
+          "position": "front",
+          "url": "bigvan/front/frontbase.jpg",
+          "id": "i"
+        },
+        {
+          "position": "left",
+          "url": "bigvan/left/leftbase.jpg",
+          "id": "j"
+        },
+        {
+          "position": "right",
+          "url": "bigvan/right/rightbase.jpg",
+          "id": "k"
+        },
+        {
+          "position": "top",
+          "url": "bigvan/top/topbase.jpg",
+          "id": "l"
+        },
+        {
+          "position": "back",
+          "url": "bigvan/back/backbase.jpg",
+          "id": "m"
+        }
       ],
       "angles": [
         {
@@ -532,25 +588,25 @@
           "position": "front",
           "angle": "roof",
           "color": "liver",
-          "id": 20 
+          "id": 20
         },
         {
           "url": "bigvan/front/front-sidesblue.png",
-          "position":"front",
+          "position": "front",
           "angle": "sides",
           "color": "blue",
           "id": 21
         },
         {
           "url": "bigvan/front/front-sidesbone.png",
-          "position":"front",
+          "position": "front",
           "angle": "sides",
           "color": "bone",
           "id": 22
         },
         {
           "url": "bigvan/front/front-sidesliver.png",
-          "position":"front",
+          "position": "front",
           "angle": "sides",
           "color": "liver",
           "id": 23
@@ -599,21 +655,21 @@
         },
         {
           "url": "bigvan/right/right-blue.png",
-          "position":"right",
+          "position": "right",
           "angle": "right",
           "color": "blue",
           "id": 30
         },
         {
           "url": "bigvan/right/right-bone.png",
-          "position":"right",
+          "position": "right",
           "angle": "right",
           "color": "bone",
           "id": 31
         },
         {
           "url": "bigvan/right/right-liver.png",
-          "position":"right",
+          "position": "right",
           "angle": "right",
           "color": "liver",
           "id": 32
@@ -683,112 +739,121 @@
         }
       ]
     },
-    "features": [
-      {
-        "position": "hood",
-        "colorId": "hood1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "hood",
-        "colorId": "hood2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "hood",
-        "colorId": "hood3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "front",
-        "colorId": "front1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "front",
-        "colorId": "front2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "front",
-        "colorId": "front3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "back",
-        "colorId": "back3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "sides",
-        "colorId": "sides1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "sides",
-        "colorId": "sides2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "sides",
-        "colorId": "sides3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof1",
-        "colorName": "blue",
-        "colorData": "#247BA0",
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof2",
-        "colorName": "bone",
-        "colorData": "#E0DDCF",
-        "isChecked": false
-      },
-      {
-        "position": "roof",
-        "colorId": "roof3",
-        "colorName": "liver",
-        "colorData": "#534B52",
-        "isChecked": false
-      }
-    ]     
+    "features": {
+      "tabs": [
+        "hood",
+        "front",
+        "back",
+        "sides",
+        "roof"
+      ],
+      "colors": [
+        {
+          "position": "hood",
+          "colorId": "hood1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "hood",
+          "colorId": "hood2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "hood",
+          "colorId": "hood3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "front",
+          "colorId": "front1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "front",
+          "colorId": "front2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "front",
+          "colorId": "front3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "back",
+          "colorId": "back3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "sides",
+          "colorId": "sides3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof1",
+          "colorName": "blue",
+          "colorData": "#247BA0",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof2",
+          "colorName": "bone",
+          "colorData": "#E0DDCF",
+          "isChecked": false
+        },
+        {
+          "position": "roof",
+          "colorId": "roof3",
+          "colorName": "liver",
+          "colorData": "#534B52",
+          "isChecked": false
+        }
+      ]
+    }
   }
 ]
