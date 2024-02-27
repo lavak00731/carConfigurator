@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-function ColorComponent({colorData, colorId, colorName, isChecked, position}) {
+function ColorComponent({colorData, colorId, colorName, isChecked, position}, selectColor) {
   const [checked, setChecked] = useState(isChecked)
-
   return (
     <div className="input-wrapper">
       <input
@@ -12,7 +11,7 @@ function ColorComponent({colorData, colorId, colorName, isChecked, position}) {
         name={ position }
         value={ colorName }
         checked={ checked }
-        onChange={() => setChecked(!checked) }
+        onChange={(e) => { setChecked(!checked); selectColor(e) }}
       />
       <label
         htmlFor={colorId}
