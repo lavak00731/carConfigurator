@@ -302,11 +302,10 @@
     },
     "features": {
       "tabs": [
-        "hood",
-        "front",
-        "back",
-        "sides",
-        "roof"
+        {"tabName":"hood", "tabId":"tabh1"},
+        {"tabName":"back", "tabId":"tabb1"},
+        {"tabName":"sides", "tabId":"tabs1"},
+        {"tabName":"roof", "tabId":"tabr1"}
       ],
       "colors": [
         {
@@ -741,11 +740,11 @@
     },
     "features": {
       "tabs": [
-        "hood",
-        "front",
-        "back",
-        "sides",
-        "roof"
+        {"tabName":"hood", "tabId":"tabh2"},
+        {"tabName":"back", "tabId":"tabb2"},
+        {"tabName":"front", "tabId":"tabf2"},
+        {"tabName":"sides", "tabId":"tabs2"},
+        {"tabName":"roof", "tabId":"tabr2"}
       ],
       "colors": [
         {

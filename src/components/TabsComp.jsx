@@ -25,16 +25,17 @@ export default function TabsComp({ features, onTab, resetFeature, selection }) {
   const renderTabs = () => {
     const tabs = [];
     features.tabs.map((tab) => {
-      const tabElem = <Tab key={tab} eventKey={tab} title={tab}>
+      
+      const tabElem = <Tab key={tab.tabId} eventKey={tab.tabName} title={tab.tabName}>
         <fieldset>
-          <legend>Pick a Color for <span>{ tab }</span></legend>
+          <legend>Pick a Color for <span>{ tab.tabName }</span></legend>
           <div className="option-wrapper">
-              {renderColorOptions(features.colors, tab)}
+              {renderColorOptions(features.colors, tab.tabName)}
           </div>
         </fieldset>
         <button className="btn btn-primary" onClick={(e)=>{
           updateSelection({ [e.target.name]: e.target.value });
-        }} >Get Color <span className="visually-hidden">for {tab}</span></button>
+        }} >Get Color <span className="visually-hidden">for {tab.tabName}</span></button>
       </Tab>
         tabs.push(tabElem);
     });
