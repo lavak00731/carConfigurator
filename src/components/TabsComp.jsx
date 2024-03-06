@@ -13,12 +13,15 @@ export default function TabsComp({ features, onTab, selection}) {
   };
 
   const selectColor = (event) => {
-    setCarPosition(event.target.name); 
+    console.log(event)
+     setCarPosition(event.target.name); 
     setColorSelected(event.target.value);
   }
-  const sendData = () => {
-    selection[carPosition] = colorSelected;
-    return selection;
+  const sendData = (tabName) => {
+    if(carPosition === tabName) {
+      selection[tabName] = colorSelected;
+      return selection;
+    }
   }
 
   const renderColorOptions = (colors, place) => {
@@ -35,17 +38,17 @@ export default function TabsComp({ features, onTab, selection}) {
  
   const renderTabs = () => {
     const tabs = [];
-    features.tabs.map((tab) => {
-      const tabElem = <Tab key={ tab.tabId } eventKey={tab.tabName} title={tab.tabName}>
+    features.tabs.map(({tabId, tabName}) => {
+      const tabElem = <Tab key={ tabId } eventKey={tabName} title={tabName}>
         <fieldset>
-          <legend>Pick a Color for <span>{ tab.tabName }</span></legend>
+          <legend>Pick a Color for <span>{ tabName }</span></legend>
           <div className="option-wrapper">
-              {renderColorOptions(features.colors, tab.tabName)}
+              {renderColorOptions(features.colors, tabName)}
           </div>
         </fieldset>
-        <button className="btn btn-primary" onClick={(carPosition, colorSelected)=>{          
-          updateCarSelections(sendData());
-        }} >Get Color <span className="visually-hidden">for {tab.tabName}</span></button>
+        <button className="btn btn-primary" onClick={()=>{          
+          updateCarSelections(sendData(tabName));
+        }} >Get Color <span className="visually-hidden">for {tabName}</span></button>
       </Tab>
         tabs.push(tabElem);
     });

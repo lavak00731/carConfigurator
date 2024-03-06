@@ -196,42 +196,42 @@
         {
           "url": "van/left/left-blue.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "blue",
           "id": 71
         },
         {
           "url": "van/left/left-bone.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "bone",
           "id": 723
         },
         {
           "url": "van/left/left-liver.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "liver",
           "id": 72
         },
         {
           "url": "van/right/right-blue.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "blue",
           "id": 73
         },
         {
           "url": "van/right/right-bone.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "bone",
           "id": 74
         },
         {
           "url": "van/right/right-liver.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "liver",
           "id": 75
         },
@@ -634,42 +634,42 @@
         {
           "url": "bigvan/left/left-blue.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "blue",
           "id": 27
         },
         {
           "url": "bigvan/left/left-bone.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "bone",
           "id": 28
         },
         {
           "url": "bigvan/left/left-liver.png",
           "position": "left",
-          "angle": "left",
+          "angle": "sides",
           "color": "liver",
           "id": 29
         },
         {
           "url": "bigvan/right/right-blue.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "blue",
           "id": 30
         },
         {
           "url": "bigvan/right/right-bone.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "bone",
           "id": 31
         },
         {
           "url": "bigvan/right/right-liver.png",
           "position": "right",
-          "angle": "right",
+          "angle": "sides",
           "color": "liver",
           "id": 32
         },

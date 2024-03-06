@@ -43,6 +43,7 @@ const CarouselComp = memo(function CarouselComp({
   const renderColors = (position, angles) => {
     let colors = [];
     angles.map((angle) =>{
+      console.log(angle)
       if(position === angle.position) {
       colors.push(<img key={ angle.id }
       className="color"
