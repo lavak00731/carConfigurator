@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 
-function ColorComponent({colorData, colorId, colorName, isChecked, position}, selectColor) {
+const ColorComponent = memo(function ColorComponent({colorData, colorId, colorName, isChecked, position}, selectColor) {
   const [checked, setChecked] = useState(isChecked)
   return (
     <div className="input-wrapper">
@@ -22,6 +22,6 @@ function ColorComponent({colorData, colorId, colorName, isChecked, position}, se
       </label>
     </div>
   );
-}
+});
 
 export default ColorComponent;
