@@ -13,8 +13,7 @@ export default function TabsComp({ features, onTab, selection}) {
   };
 
   const selectColor = (event) => {
-    console.log(event)
-     setCarPosition(event.target.name); 
+    setCarPosition(event.target.name); 
     setColorSelected(event.target.value);
   }
   const sendData = (tabName) => {

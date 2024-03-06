@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { useState, memo, useEffect } from "react";
-const CarouselComp = memo(function CarouselComp({
+import { useState, useEffect } from "react";
+function CarouselComp({
   data,
   selection,
   tabSelection,
@@ -80,5 +80,5 @@ const CarouselComp = memo(function CarouselComp({
       </Carousel>
     </>
   );
-});
+}
 export default CarouselComp;

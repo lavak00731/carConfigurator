@@ -26,6 +26,9 @@
     margin-right: 0.5rem;
     border: 2px solid transparent;
 }
+.chooseStyle span {
+    cursor: pointer;
+}
 input[type="radio"]:focus-visible + .chooseStyle {
     border: 2px solid red;
 }
