@@ -6,19 +6,32 @@ import { useAppContent } from "../context/AppContext";
 export default function TabsComp({ features, onTab, selection}) {
   const { updateCarSelections } = useAppContent();
   const [key, setKey] = useState("hood");
-  const [carPosition, setCarPosition] = useState('');
-  const [colorSelected, setColorSelected] = useState('');
+  const [reset, setReset] = useState({position: null, reset: false});
   const handleSelection = (k) => {
     setKey(k);
   };
 
-  const selectColor = (event) => {
-    setCarPosition(event.target.name); 
-    setColorSelected(event.target.value);
-  }
+  const carPosition = tabName => {
+    const elem = document.querySelector('.active input[name="'+tabName+'"]:checked')
+      if(elem) {
+        return elem.name
+      }
+    }
+  const colorSelected = tabName => document.querySelector('.active input[name="'+tabName+'"]:checked').value
+
   const sendData = (tabName) => {
-    if(carPosition === tabName) {
-      selection[tabName] = colorSelected;
+    const carPositionValue = carPosition(tabName);
+    if(carPositionValue && carPositionValue === tabName) {
+      selection[tabName] = colorSelected(tabName);
+      return selection;
+    }
+  }
+
+  const resetData = (tabName) => {
+    const carPositionValue = carPosition(tabName);
+    if(carPositionValue === tabName) {
+      selection[tabName] = null;
+      setReset({position: tabName, reset: true});
       return selection;
     }
   }
@@ -27,7 +40,7 @@ export default function TabsComp({ features, onTab, selection}) {
     let colorPickers = [];
     colors.map((color) =>{
       if(color.position === place) {
-        const colorSwatch = ColorComponent(color, selectColor)
+        const colorSwatch = ColorComponent(color, reset)
         colorPickers.push(colorSwatch);
       }  
     });
@@ -48,6 +61,9 @@ export default function TabsComp({ features, onTab, selection}) {
         <button className="btn btn-primary" onClick={()=>{          
           updateCarSelections(sendData(tabName));
         }} >Get Color <span className="visually-hidden">for {tabName}</span></button>
+        <button className="btn btn-secondary" onClick={()=>{          
+          updateCarSelections(resetData(tabName));
+        }} >Reset</button>
       </Tab>
         tabs.push(tabElem);
     });
