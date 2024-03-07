@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContent } from "../context/AppContext";
+import { ShareBtns } from "../components/ShareBtns";
 import CarouselComp from "../components/CarouselComp";
 import TabsComp from "../components/TabsComp";
 import "./../styles/personalization.css";
@@ -33,6 +34,7 @@ export default function CarPersonalization() {
             selection={carSelections}
           />
         </div>
+        <ShareBtns />
       </div>
     </main>
   );

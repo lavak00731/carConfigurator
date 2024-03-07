@@ -58,12 +58,14 @@ export default function TabsComp({ features, onTab, selection}) {
               {renderColorOptions(features.colors, tabName)}
           </div>
         </fieldset>
-        <button className="btn btn-primary" onClick={()=>{          
-          updateCarSelections(sendData(tabName));
-        }} >Get Color <span className="visually-hidden">for {tabName}</span></button>
-        <button className="btn btn-secondary" onClick={()=>{          
-          updateCarSelections(resetData(tabName));
-        }} >Reset</button>
+        <div className="mb-3">
+          <button className="btn btn-primary" onClick={()=>{          
+            updateCarSelections(sendData(tabName));
+          }} >Get Color <span className="visually-hidden">for {tabName}</span></button>
+          <button className="btn btn-secondary" onClick={()=>{          
+            updateCarSelections(resetData(tabName));
+          }} >Reset</button>
+        </div>       
       </Tab>
         tabs.push(tabElem);
     });
