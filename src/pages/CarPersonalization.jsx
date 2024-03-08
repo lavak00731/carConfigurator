@@ -1,17 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppContent } from "../context/AppContext";
 import { ShareBtns } from "../components/ShareBtns";
 import CarouselComp from "../components/CarouselComp";
 import TabsComp from "../components/TabsComp";
+import { useSearchParams, useLocation } from "react-router-dom";
 import "./../styles/personalization.css";
 
 export default function CarPersonalization() {
-  const { carData, carSelections, updateCarSelections, isLoading } = useAppContent();
-  const [tabSelection, setTabSelection] = useState("hood");
+
+  const { carData, carSelections, isLoading } = useAppContent();
+  const [ tabSelection, setTabSelection ] = useState("hood");
+  const [ searchParams, setSearchParams ] = useSearchParams();
+  const [ flag, setFlag ] = useState(true);  
+  const location = window.location.href;
+  const locationRead = useLocation();
+  const paramsCreator = (carSelections) => {
+    const parameters = [];
+    for (const carKey in carSelections) {
+      if(carSelections[carKey]){
+        parameters.push(carKey+'='+carSelections[carKey]);
+      }
+    }
+    return parameters;
+  } 
+
+  useEffect(() =>{  
+    if(flag && locationRead.search !== "")  {
+      console.log('hola');
+      
+    }
+    const params = paramsCreator(carSelections);
+    setSearchParams({params})   
+
+  }, [carSelections, searchParams])
+
   if (!carData || isLoading) {
     return <p role="alert">Loading</p>;
-  }
-  
+  }  
+
   return (
     <main className="container">
       <div className="row d-flex">
@@ -34,7 +60,7 @@ export default function CarPersonalization() {
             selection={carSelections}
           />
         </div>
-        <ShareBtns />
+        <ShareBtns location={location} />
       </div>
     </main>
   );

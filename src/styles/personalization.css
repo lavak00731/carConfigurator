@@ -225,17 +225,6 @@ background-color: #FF6600
   border-color: #5e5e5e;
 }
 
-.resp-sharing-button--linkedin {
-  background-color: #0077b5;
-  border-color: #0077b5;
-}
-
-.resp-sharing-button--linkedin:hover,
-.resp-sharing-button--linkedin:active {
-  background-color: #046293;
-  border-color: #046293;
-}
-
 .resp-sharing-button--whatsapp {
   background-color: #25D366;
   border-color: #25D366;
