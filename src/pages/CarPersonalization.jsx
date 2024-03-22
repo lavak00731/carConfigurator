@@ -3,36 +3,49 @@ import { useAppContent } from "../context/AppContext";
 import { ShareBtns } from "../components/ShareBtns";
 import CarouselComp from "../components/CarouselComp";
 import TabsComp from "../components/TabsComp";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams, useLocation} from "react-router-dom";
 import "./../styles/personalization.css";
 
 export default function CarPersonalization() {
 
-  const { carData, carSelections, isLoading } = useAppContent();
+  const { carData, carSelections, isLoading, updateCarSelections } = useAppContent();
   const [ tabSelection, setTabSelection ] = useState("hood");
   const [ searchParams, setSearchParams ] = useSearchParams();
   const [ flag, setFlag ] = useState(true);  
   const location = window.location.href;
   const locationRead = useLocation();
   const paramsCreator = (carSelections) => {
-    const parameters = [];
+    const parameters = {};
     for (const carKey in carSelections) {
       if(carSelections[carKey]){
-        parameters.push(carKey+'='+carSelections[carKey]);
+        parameters[carKey] = carSelections[carKey];
       }
     }
     return parameters;
   } 
+  const updateFromUrl = (searchParams) => {
+    const filteredParams = searchParams.slice(1).split('&');
+    console.log(filteredParams)
+    let payload;
+    filteredParams.forEach(param => {
+      const payload =  param.split('=');
+      carSelections[payload[0]] = payload[1];
+      updateCarSelections(carSelections)
+    })
+    
+  }
 
   useEffect(() =>{  
     if(flag && locationRead.search !== "")  {
-      console.log('hola');
+      //updateCarSelections(locationRead.search);
+      updateFromUrl(locationRead.search);
       
     }
+    setFlag(false);
     const params = paramsCreator(carSelections);
-    setSearchParams({params})   
+    setSearchParams(params);  
 
-  }, [carSelections, searchParams])
+  }, [carSelections, searchParams, flag])
 
   if (!carData || isLoading) {
     return <p role="alert">Loading</p>;
