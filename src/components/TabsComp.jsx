@@ -3,10 +3,12 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import ColorComponent from "../components/ColorComponent";
 import { useAppContent } from "../context/AppContext";
+import { Link } from "react-router-dom";
 export default function TabsComp({ features, onTab, selection}) {
-  const { updateCarSelections, carSelections } = useAppContent();
+  const { updateCarSelections, carSelections, carData} = useAppContent();
   const [key, setKey] = useState("hood");
   const [reset, setReset] = useState({position: null, reset: false});
+  console.log(carData)
   const handleSelection = (k) => {
     setKey(k);
   };
@@ -65,6 +67,9 @@ export default function TabsComp({ features, onTab, selection}) {
           <button className="btn btn-secondary" onClick={()=>{          
             updateCarSelections(resetData(tabName));
           }} >Reset</button>
+        </div>
+        <div className="mb-3">
+        <Link to={`/preview`} className="btn btn-primary">Preview Your Selection <span className="visually-hidden">{carData.cardata['Name']}</span></Link>
         </div>       
       </Tab>
         tabs.push(tabElem);
