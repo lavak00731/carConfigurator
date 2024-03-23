@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 
-function ColorComponent({colorData, colorId, colorName, isChecked, position}, reset) {
+function ColorComponent({colorData, colorId, colorName, isChecked, position}, reset, carSelections) {
   
   useEffect(() =>{
     if(reset.reset && position === reset['position']) {
       setChecked(false);
+    } else if(colorName === carSelections[position]) {
+      setChecked(true)
+      
     }
   }, [reset]);
 

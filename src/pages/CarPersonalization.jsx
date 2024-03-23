@@ -25,7 +25,6 @@ export default function CarPersonalization() {
   } 
   const updateFromUrl = (searchParams) => {
     const filteredParams = searchParams.slice(1).split('&');
-    console.log(filteredParams)
     let payload;
     filteredParams.forEach(param => {
       const payload =  param.split('=');

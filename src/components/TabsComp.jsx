@@ -4,7 +4,7 @@ import Tabs from "react-bootstrap/Tabs";
 import ColorComponent from "../components/ColorComponent";
 import { useAppContent } from "../context/AppContext";
 export default function TabsComp({ features, onTab, selection}) {
-  const { updateCarSelections } = useAppContent();
+  const { updateCarSelections, carSelections } = useAppContent();
   const [key, setKey] = useState("hood");
   const [reset, setReset] = useState({position: null, reset: false});
   const handleSelection = (k) => {
@@ -36,11 +36,11 @@ export default function TabsComp({ features, onTab, selection}) {
     }
   }
 
-  const renderColorOptions = (colors, place) => {
+  const renderColorOptions = (colors, place, carSelections) => {
     let colorPickers = [];
     colors.map((color) =>{
       if(color.position === place) {
-        const colorSwatch = ColorComponent(color, reset)
+        const colorSwatch = ColorComponent(color, reset, carSelections)
         colorPickers.push(colorSwatch);
       }  
     });
@@ -48,14 +48,14 @@ export default function TabsComp({ features, onTab, selection}) {
   };
 
  
-  const renderTabs = () => {
+  const renderTabs = (carSelections) => {
     const tabs = [];
     features.tabs.map(({tabId, tabName}) => {
       const tabElem = <Tab key={ tabId } eventKey={tabName} title={tabName}>
         <fieldset>
           <legend>Pick a Color for <span>{ tabName }</span></legend>
           <div className="option-wrapper">
-              {renderColorOptions(features.colors, tabName)}
+              {renderColorOptions(features.colors, tabName, carSelections)}
           </div>
         </fieldset>
         <div className="mb-3">
@@ -84,7 +84,7 @@ export default function TabsComp({ features, onTab, selection}) {
       fill
     >
       {
-        renderTabs()
+        renderTabs(carSelections)
       }
     </Tabs>
   );
