@@ -8,7 +8,6 @@ export default function TabsComp({ features, onTab, selection}) {
   const { updateCarSelections, carSelections, carData} = useAppContent();
   const [key, setKey] = useState("hood");
   const [reset, setReset] = useState({position: null, reset: false});
-  console.log(carData)
   const handleSelection = (k) => {
     setKey(k);
   };

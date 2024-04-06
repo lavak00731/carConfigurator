@@ -35,7 +35,6 @@ export const AppProvider = ({ children }) => {
         const selectedCar = (data ?? []).find(
           (car) => String(car.id) === String(carId)
         );
-
         if (selectedCar) {
           setCarData(selectedCar);
           setIsLoading(false);
