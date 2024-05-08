@@ -84,9 +84,7 @@ export default function TabsComp({ features, onTab, selection}) {
   };
 
   const abortGoing = (e) => {
-    console.log(Object.values(carSelections).every( x => x === null))
     if(Object.values(carSelections).every( x => x === null)) {
-      console.log('hola')
       e.preventDefault();
       setShow(true);
     }
