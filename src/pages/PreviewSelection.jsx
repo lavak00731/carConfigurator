@@ -3,8 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useAppContent } from "../context/AppContext";
 export default function PreviewSelection() {
-    const { carData, carSelections, isLoading, } = useAppContent();
-
+    const { carData, carSelections, isLoading } = useAppContent();
+    console.log(carData)
+    console.log(isLoading)
     if (!carData || isLoading) {
         return <p role="alert">Loading</p>;
       }  

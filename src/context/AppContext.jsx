@@ -1,12 +1,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 export const AppContext = createContext();
 
-export const AppProvider = ({ children }) => {
-  const { carId } = useParams();
+export const AppProvider = ({ children }) => {    
   const [ originalData, setOriginalData ] = useState({})
   const [carData, setCarData] = useState(null);
+  const { carId } = useParams();
+
   const [carSelections, setCarSelections] = useState({
     "hood": null,
     "front": null,
@@ -22,23 +23,24 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const abortController = new AbortController();
-
     setIsLoading(true);
-
     fetch("http://localhost:5173/mock/carmodel.json", {
       signal: abortController.signal,
     })
       .then((response) => response.json())
       .then((data) => {
         if (!data) throw new Error("Could not fetch any data");
-        setOriginalData(data) 
-        const selectedCar = (data ?? []).find(
-          (car) => String(car.id) === String(carId)
-        );
-        if (selectedCar) {
-          setCarData(selectedCar);
-          setIsLoading(false);
+        setOriginalData(data);
+        if(carId) {
+          const selectedCar = (data ?? []).find(
+            (car) => String(car.id) === String(carId)
+          );
+          if (selectedCar) {
+            setCarData(selectedCar);
+            
+          }
         }
+        setIsLoading(false);        
       })
       .catch((error) => {
         // console.log(error);

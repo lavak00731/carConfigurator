@@ -7,7 +7,6 @@ import { useSearchParams, useLocation} from "react-router-dom";
 import "./../styles/personalization.css";
 
 export default function CarPersonalization() {
-
   const { carData, carSelections, isLoading, updateCarSelections } = useAppContent();
   const [ tabSelection, setTabSelection ] = useState("hood");
   const [ searchParams, setSearchParams ] = useSearchParams();
@@ -68,11 +67,11 @@ export default function CarPersonalization() {
           <TabsComp
             features={carData.features}
             onTab={setTabSelection}
-            selection={carSelections}
+            selection={carSelections}            
           />
         </div>
         <ShareBtns location={location} />
-      </div>
+      </div>      
     </main>
   );
 }

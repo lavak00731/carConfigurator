@@ -4,10 +4,12 @@ import Tabs from "react-bootstrap/Tabs";
 import ColorComponent from "../components/ColorComponent";
 import { useAppContent } from "../context/AppContext";
 import { Link } from "react-router-dom";
+import Toast from 'react-bootstrap/Toast';
 export default function TabsComp({ features, onTab, selection}) {
   const { updateCarSelections, carSelections, carData} = useAppContent();
   const [key, setKey] = useState("hood");
   const [reset, setReset] = useState({position: null, reset: false});
+  const [show, setShow] = useState(false);
   const handleSelection = (k) => {
     setKey(k);
   };
@@ -47,11 +49,10 @@ export default function TabsComp({ features, onTab, selection}) {
     });
     return colorPickers;  
   };
-
  
   const renderTabs = (carSelections) => {
     const tabs = [];
-    features.tabs.map(({tabId, tabName}) => {
+    features.tabs.map(({tabId, tabName}, i) => {
       const tabElem = <Tab key={ tabId } eventKey={tabName} title={tabName}>
         <fieldset>
           <legend>Pick a Color for <span>{ tabName }</span></legend>
@@ -68,13 +69,28 @@ export default function TabsComp({ features, onTab, selection}) {
           }} >Reset</button>
         </div>
         <div className="mb-3">
-        <Link to={`/preview`} className="btn btn-primary">Preview Your Selection <span className="visually-hidden">{carData.cardata['Name']}</span></Link>
-        </div>       
+        <Link to={`/preview`} onClick={(e) => abortGoing(e) } className="btn btn-primary">Preview Your Selection <span className="visually-hidden">{carData.cardata['Name']}</span></Link>
+        </div>
+        <Toast onClose={() => setShow(false)} show={show} delay={7000} autohide>
+          <Toast.Header>
+            <strong className="me-auto">Attention</strong>
+          </Toast.Header>
+          <Toast.Body>Please choose a color to go to the next step</Toast.Body>
+        </Toast>       
       </Tab>
         tabs.push(tabElem);
     });
     return tabs;
   };
+
+  const abortGoing = (e) => {
+    console.log(Object.values(carSelections).every( x => x === null))
+    if(Object.values(carSelections).every( x => x === null)) {
+      console.log('hola')
+      e.preventDefault();
+      setShow(true);
+    }
+  }
 
   return (
     <Tabs
@@ -89,7 +105,7 @@ export default function TabsComp({ features, onTab, selection}) {
     >
       {
         renderTabs(carSelections)
-      }
+      }      
     </Tabs>
   );
 }
