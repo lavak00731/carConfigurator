@@ -69,7 +69,7 @@ export default function TabsComp({ features, onTab, selection}) {
           }} >Reset</button>
         </div>
         <div className="mb-3">
-        <Link to={`/preview`} onClick={(e) => abortGoing(e) } className="btn btn-primary">Preview Your Selection <span className="visually-hidden">{carData.cardata['Name']}</span></Link>
+        <Link to={`/preview`} onClick={(e) => abortGoing(e) } className="btn btn-dark">Preview Your Selection &#x2c3;<span className="visually-hidden">{carData.cardata['Name']}</span></Link>
         </div>
         <Toast onClose={() => setShow(false)} show={show} delay={7000} autohide>
           <Toast.Header>
