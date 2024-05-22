@@ -8,7 +8,6 @@ export default function PreviewSelection() {
 
     const [validated, setValidated] = useState(false);
     console.log(carData)
-    console.log(isLoading)
     if (!carData || isLoading) {
         return <p role="alert">Loading</p>;
       } 
