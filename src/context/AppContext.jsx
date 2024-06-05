@@ -57,6 +57,7 @@ export const AppProvider = ({ children }) => {
       value={{
         originalData,
         carData,
+        setCarData,
         carSelections,
         updateCarSelections,
         isLoading,
