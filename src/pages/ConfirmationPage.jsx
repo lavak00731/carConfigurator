@@ -1,5 +1,5 @@
 import { useAppContent } from "../context/AppContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const ConfirmationPage = () => {
     const navigate = useNavigate();
     const {updateCarSelections, setCarData} = useAppContent();
@@ -12,13 +12,12 @@ const ConfirmationPage = () => {
             "sides": null,
             "back": null
         })
-        navigate("/")
     }
   return (
         <>
             <div className="container">
                 <h1>Thanks for your purchase</h1>
-                <p><button className="btn btn-primary" onClick={handleReset}>Back to Home</button></p>
+                <p><Link className="btn btn-primary" onClick={handleReset} to="/">Back to Home</Link></p>
             </div>
             
         </>
