@@ -32,7 +32,7 @@
 input[type="radio"]:focus-visible + .chooseStyle {
     border: 2px solid red;
 }
-.chooseStyle:last-child() {
+.chooseStyle:last-child {
     margin-right: 0;
 }
 .chooseStyle span {

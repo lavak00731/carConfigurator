@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
+import cars from "./../assets/carmodel";
 
 export const AppContext = createContext();
 
@@ -24,7 +25,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const abortController = new AbortController();
     setIsLoading(true);
-    fetch("http://localhost:5173/mock/carmodel.json", {
+    /*fetch("http://localhost:5173/mock/carmodel.json", {
       signal: abortController.signal,
     })
       .then((response) => response.json())
@@ -45,8 +46,20 @@ export const AppProvider = ({ children }) => {
       .catch((error) => {
         // console.log(error);
         setIsLoading(false);
-      });
-
+      });*/
+      const data = cars;
+      if (!data) throw new Error("Could not fetch any data");
+        setOriginalData(data);
+        if(carId) {
+          const selectedCar = (data ?? []).find(
+            (car) => String(car.id) === String(carId)
+          );
+          if (selectedCar) {
+            setCarData(selectedCar);
+            
+          }
+        }
+        setIsLoading(false);
     return () => {
       abortController.abort();
     };

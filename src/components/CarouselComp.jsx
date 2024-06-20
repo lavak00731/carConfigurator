@@ -46,7 +46,7 @@ function CarouselComp({
      if(position === angle.position) {
       colors.push(<img key={ angle.id }
       className="color"
-      src={"/src/assets/" + angle.url}
+      src={"/" + angle.url}
       hidden={!isHidden(angle)}
       />)
       }      
@@ -61,7 +61,7 @@ function CarouselComp({
             <figure className="img-wrapper">
               <img
                 className="d-block w-100"
-                src={"/src/assets/" + picture.url}
+                src={"/" + picture.url}
                 alt=""
               />
               { renderColors(picture.position, angles) }

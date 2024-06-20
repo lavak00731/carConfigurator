@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Car({data: {id, cardata, features, pictures}}) {
   return (
     <div className="card">
-        <img src={'/src/assets/'+cardata['picture']} className="card-img-top" alt={cardata['Name']}/>
+        <img src={'/'+cardata['picture']} className="card-img-top" alt={cardata['Name']}/>
        
         <div className="card-body">
             <h2 className="card-title ps-3">{cardata['Name']}</h2>
